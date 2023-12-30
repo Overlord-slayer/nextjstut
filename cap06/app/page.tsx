@@ -1,10 +1,12 @@
-import Posts from "./components/Posts";
+import Posts from "./components/Posts"
+import MyProfilePic from './components/MyProfilePic'
 
 export const revalidate = 10
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="mx-auto">
+      <MyProfilePic/>
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
         Hola y Bienvenido 👋&nbsp;
         <span className="whitespace-nowrap">
@@ -12,6 +14,6 @@ export default function Home() {
         </span>
       </p>
       <Posts/>
-    </main>
+    </div>
   )
 }
